@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<style id="webmakerstyle">
+
+</style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      transition:.3s;
+    }
+    body{
+      padding:0;
+      background-image: linear-gradient(to right, #515151, #111111);
+    }
+    .cool-slider {
+      width:100%;
+      height:100vh;      
+      background-image: linear-gradient(to right, #515151, #111111);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding-inline:30px;
+      margin:0px;
+      transform-style:preserve-3d;
+      transform:perspective(1000px);
+    }
+    .item {
+      background: transparent;
+      width: 150px;
+      height: 200px;
+      overflow: hidden;
+    }
+    .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .item:hover{
+       filter:brightness(1);
+       transform:translateZ(200px); 
+    }
+    .item{
+      filter:brightness(0);
+    }
+    .item:hover + *{
+      filter:brightness(0.6);
+      transform:translateZ(150px) rotateY(30deg); 
+    }
+    
+    .item:hover + * + *{
+      filter:brightness(0.3);
+      transform:translateZ(80px) rotateY(15deg); 
+    }
+    .item:has(+ *:hover){
+      filter:brightness(0.6);
+      transform:translateZ(150px) rotateY(-30deg);   
+    }
+    .item:has(+ * + *:hover){
+      filter:brightness(0.3);
+      transform:translateZ(80px) rotateY(-15deg); 
+    }
+  </style>
+</head>
+<body>
+  <div class="cool-slider">
+    <div class="item">
+      <img src="https://i.pinimg.com/originals/11/71/2b/11712b7ed0aa6d2c8b5dd1ffd47b66bc.gif" alt="">
+    </div>
+    <div class="item">
+      <img src="https://i.pinimg.com/originals/f2/b8/ee/f2b8ee35410a8d78b354914a5eb3a15a.gif" alt="">
+    </div>
+    <div class="item">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/4b894127262237.5636580c454f8.gif" alt="">
+    </div>
+    <div class="item">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f1caa652225099.5909618612ad1.png" alt="">
+    </div>
+    <div class="item">
+      <img src="https://i.ytimg.com/vi/gzrhPPeFkTU/maxresdefault.jpg" alt="">
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR355nFRO9d6A2xawfxBZcMzIbxvf1w4TzjcWs2RM8G-C5EZMDhOEGBkWlAO2CG1cY9GoA&usqp=CAU" alt="">
+    </div>
+    <div class="item">
+      <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/217033680/original/fecf42b3a5698612f9cbf0be444c855afc16b92c/draw-and-animate-pixel-art-landscape-for-you-26a0.png" alt="">
+    </div>
+  </div>
+</body>
+</html>
+
+
+<script src="filesystem:chrome-extension://lkfkkhfhhdkiemehlpkgjeojomhpccnh/temporary/script.js">
+</script>
+</body>
+</html>
